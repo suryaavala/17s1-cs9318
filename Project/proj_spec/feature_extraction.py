@@ -8,6 +8,7 @@ import pandas as pd
 from helper import *
 import nltk
 import numpy as np
+from sklearn.preprocessing import OneHotEncoder
 
 '''
 Phenome Declaration
@@ -33,7 +34,7 @@ for i in range(len(lines)):
     stress = []
     syl = []
     vow_encoding = []
-    encoded_word = ''
+    encoded_word = []
     for n in nomes:
         if n[-1].isdigit():
             stress.append(int(n[-1]))
@@ -46,7 +47,8 @@ for i in range(len(lines)):
             vow_encoding.append(1)
         else:
             vow_encoding.append(0)
-        encoded_word += str(n)
+
+    encoded_word = list(map(phe_dict.get, syl))
 
     #print(word, syl, tag, nb_syllab, vow_encoding, encoded_word, stress)
     data.append([word, syl, tag, nb_syllab, vow_encoding, encoded_word, stress])

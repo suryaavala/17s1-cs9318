@@ -21,8 +21,11 @@ labels = ['word' , 'syl']
 df = pd.DataFrame.from_records(lines, columns=labels)
 df['syla'] = df['syl'].str.split(" ")
 #df['type'] = df['word'].nltk.pos_tag()
-df['type'] = df['word'].apply(nltk.pos_tag)
+#df['type'] = df['word'].apply(nltk.pos_tag)
+df['list'] = df['word'].apply(lambda x: [x])
+df['type'] = df['list'].apply(lambda x : nltk.pos_tag(x)[0][1])
 #empty values in a dataframe np.where(pd.isnull(df))
+#unique values p = df.type.unique()
 
 localtime = time.localtime()
 mi = localtime.tm_min

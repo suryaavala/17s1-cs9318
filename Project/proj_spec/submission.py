@@ -157,4 +157,4 @@ def test(data, classifier_file):# do not change the heading of the function
     Y = df[df.columns[-1]].as_matrix()
     y_predict = clf.predict(X)
 
-    return y_predict
+    return list(y_predict)

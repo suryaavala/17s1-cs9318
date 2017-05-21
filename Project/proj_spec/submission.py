@@ -157,4 +157,19 @@ def test(data, classifier_file):# do not change the heading of the function
     Y = df[df.columns[-1]].as_matrix()
     y_predict = clf.predict(X)
 
-    return list(y_predict)
+    nb_syl = list(y_predict)
+
+    vows = ['AA', 'AE', 'AH', 'AO', 'AW', 'AY', 'EH', 'ER', 'EY', 'IH', 'IY', 'OW', 'OY', 'UH', 'UW']
+
+    syls = list(df[df.columns[1]].as_matrix())
+    nb_vows = []
+    for i in range(len(syls)):
+        nb_vow = 0
+        #nb_pos = nb_syl[i]
+        for s in syls[i][:nb_syl[i]]:
+            if s in vows:
+                nb_vow += 1
+        nb_vows.append(nb_vow+1)
+
+
+    return nb_vows

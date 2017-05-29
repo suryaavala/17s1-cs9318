@@ -16,3 +16,4 @@ http://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/
 http://svn.code.sf.net/p/cmusphinx/code/trunk/cmudict/cmudict-0.7b.phones
 http://henrysmac.org/blog/2010/3/15/python-pickle-example-including-gzip-for-compression.html
 http://www.speech.cs.cmu.edu/cgi-bin/cmudict?in=University&stress=-s
+http://www.evanini.com/papers/slt2014_short.pdf

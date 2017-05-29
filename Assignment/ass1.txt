@@ -7,3 +7,7 @@ Any       Any   Any    4100
 
 
 2.
+
+SELECT Location, Time, Item, Sum(Quantity)
+FROM Sales
+GROUP BY Location, Time, Item; 

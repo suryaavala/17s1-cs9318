@@ -1,0 +1,9 @@
+Q1.
+
+1.
+
+Location  Time  Item   SUM(Quantity)
+Any       Any   Any    4100
+
+
+2.

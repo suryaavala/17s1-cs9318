@@ -26,18 +26,24 @@ Location  Time  Item  SUM(Quantity)
 4.
 
 Step1:
-
 Location  Time Item Quantity
 1         1    1    1400
 1         2    1    1500
 1         2    3    500
 2         1    2    1700
-
+-----------------------------------------------------------
 Step2:
-f(Location, Time, Item) = 3*Location + Time + 4*Item
+f(Location, Time, Item) = 3*Location + 3*Time + 4*Item
 
 Location  Time Item Quantity      Offset
-1         1    1    1400
-1         2    1    1500
-1         2    3    500
-2         1    2    1700
+1         1    1    1400          10
+1         2    1    1500          13
+1         2    3    500           21
+2         1    2    1700          17
+------------------------------------------------------------
+Step3:
+ArrayIndex  Value
+10          1400
+13          1500
+17          1700
+21          500

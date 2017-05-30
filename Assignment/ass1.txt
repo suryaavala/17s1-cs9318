@@ -1,17 +1,14 @@
 Q1.
-
 1.
 
 Location  Time  Item   SUM(Quantity)
 Any       Any   Any    4100
-
 
 2.
 
 SELECT Location, Time, Item, Sum(Quantity)
           FROM Sales
           GROUP BY Location, Time, Item;
-
 
 3.
 
@@ -21,7 +18,6 @@ SELECT  Location, Time, Item, SUM(Quantity)
           HAVING  COUNT(*) > 1
 
 Location  Time  Item  SUM(Quantity)
-
 
 4.
 
@@ -85,3 +81,16 @@ Data: D is a dataset of n d-dimensional points; k is the number of clusters.
 3.
 
 
+
+Q2.
+
+2.
+
+• GNB and Logistic Regression converge toward their asymptotic accuracies
+at different rates. As Ng & Jordan (2002) show, GNB parameter estimates
+converge toward their asymptotic values in order logn examples, where n
+is the dimension of X. In contrast, Logistic Regression parameter estimates
+converge more slowly, requiring order n examples. The authors also show
+that in several data sets Logistic Regression outperforms GNB when many
+training examples are available, but GNB outperforms Logistic Regression
+when training data is scarce.

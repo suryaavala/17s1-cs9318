@@ -47,3 +47,27 @@ ArrayIndex  Value
 13          1500
 17          1700
 21          500
+
+
+
+
+Q3.
+
+1.
+
+Data: D is a dataset of n d-dimensional points; k is the number of clusters.
+  Initialize k centers C = [c1, c2, . . . , ck];
+  canStop ← false;
+  while canStop = false do
+    Initialize k empty clusters G = [g1, g2, . . . , gk];
+    for each data point p ∈ D do
+      cx ← NearestCenter(p, C);
+      gcx .append(p);
+    C_old ← C;
+    C ← [];
+    for each group g ∈ G do
+      ci ← ComputeCenter(g);
+      C.append(ci);
+    if C_old == C then
+      canStop ← true;
+  return G;

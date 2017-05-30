@@ -51,6 +51,11 @@ ArrayIndex  Value
 
 
 
+
+
+
+
+
 Q3.
 
 1.
@@ -71,3 +76,12 @@ Data: D is a dataset of n d-dimensional points; k is the number of clusters.
     if C_old == C then
       canStop ← true;
   return G;
+
+
+2.
+
+
+
+3.
+
+

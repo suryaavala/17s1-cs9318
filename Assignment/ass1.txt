@@ -34,3 +34,10 @@ Location  Time Item Quantity
 2         1    2    1700
 
 Step2:
+f(Location, Time, Item) = 3*Location + Time + 4*Item
+
+Location  Time Item Quantity      Offset
+1         1    1    1400
+1         2    1    1500
+1         2    3    500
+2         1    2    1700
